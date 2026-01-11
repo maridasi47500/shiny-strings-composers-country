@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :composer_ids %><br />
-<%=f.collection_check_boxes(:composer_ids, Composer.all, :id, :name) do |b|%>
+<%=f.collection_check_boxes(:composer_ids, Composer.all.where(country_id: params[:country_id]), :id, :name) do |b|%>
   <%=b.label(class: "check_box") do%> <%= b.check_box(class: "check_box") %>
 <%=b.text%>
 <%end%>
