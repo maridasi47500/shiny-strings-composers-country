@@ -1,32 +1,23 @@
 <div id="<%= dom_id score %>">
   <p>
-    <strong>Composer:</strong>
-    <%= score.composer_id %>
+    <strong>score:</strong>
+    <%= score.title %>
+    <%= score.composer.name %>
   </p>
-
   <p>
     <strong>Title:</strong>
     <%= score.title %>
   </p>
 
   <p>
-    <strong>Content:</strong>
-    <%= score.content %>
+    <strong>Description:</strong>
+    <%= score.description %>
   </p>
 
   <p>
-    <strong>Times:</strong>
-    <%= score.times %>
-  </p>
+<iframe style="width:90%;height:1000px;" src="/uploads/<%=score.title.parameterize%>/hey<%=score.title.parameterize%>.html">
+</iframe>
 
-  <p>
-    <strong>Keys:</strong>
-    <%= score.keys %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= score.user_id %>
   </p>
 
 </div>

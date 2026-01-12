@@ -15,9 +15,10 @@ class ScoresTest < ApplicationSystemTestCase
     click_on "New score"
 
     fill_in "Composer", with: @score.composer_id
-    fill_in "Content", with: @score.content
-    fill_in "Keys", with: @score.keys
-    fill_in "Times", with: @score.times
+    fill_in "Description", with: @score.description
+    fill_in "Key signature", with: @score.key_signature
+    fill_in "Myscore", with: @score.myscore
+    fill_in "Time signature", with: @score.time_signature
     fill_in "Title", with: @score.title
     fill_in "User", with: @score.user_id
     click_on "Create Score"
@@ -31,9 +32,10 @@ class ScoresTest < ApplicationSystemTestCase
     click_on "Edit this score", match: :first
 
     fill_in "Composer", with: @score.composer_id
-    fill_in "Content", with: @score.content
-    fill_in "Keys", with: @score.keys
-    fill_in "Times", with: @score.times
+    fill_in "Description", with: @score.description
+    fill_in "Key signature", with: @score.key_signature
+    fill_in "Myscore", with: @score.myscore
+    fill_in "Time signature", with: @score.time_signature
     fill_in "Title", with: @score.title
     fill_in "User", with: @score.user_id
     click_on "Update Score"

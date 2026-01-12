@@ -65,6 +65,6 @@ class ScoresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def score_params
-      params.expect(score: [ :composer_id, :title, :content, :times, :keys, :user_id ])
+      params.expect(score: [ :user_id, :title, :composer_id, :title, :description, :myscore, :time_signature, :key_signature ])
     end
 end

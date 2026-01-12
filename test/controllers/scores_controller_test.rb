@@ -17,7 +17,7 @@ class ScoresControllerTest < ActionDispatch::IntegrationTest
 
   test "should create score" do
     assert_difference("Score.count") do
-      post scores_url, params: { score: { composer_id: @score.composer_id, content: @score.content, keys: @score.keys, times: @score.times, title: @score.title, user_id: @score.user_id } }
+      post scores_url, params: { score: { composer_id: @score.composer_id, description: @score.description, key_signature: @score.key_signature, myscore: @score.myscore, time_signature: @score.time_signature, title: @score.title, user_id: @score.user_id } }
     end
 
     assert_redirected_to score_url(Score.last)
@@ -34,7 +34,7 @@ class ScoresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update score" do
-    patch score_url(@score), params: { score: { composer_id: @score.composer_id, content: @score.content, keys: @score.keys, times: @score.times, title: @score.title, user_id: @score.user_id } }
+    patch score_url(@score), params: { score: { composer_id: @score.composer_id, description: @score.description, key_signature: @score.key_signature, myscore: @score.myscore, time_signature: @score.time_signature, title: @score.title, user_id: @score.user_id } }
     assert_redirected_to score_url(@score)
   end
 

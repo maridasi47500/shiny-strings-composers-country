@@ -13,32 +13,31 @@
 
   <div>
     <%= form.label :composer_id, style: "display: block" %>
-    <%= form.number_field :composer_id %>
+    <%= form.select :composer_id, Composer.all.collect{|h|["#{h.name}", h.id]} %>
   </div>
 
+    <%= form.hidden_field :user_id %>
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_field :content %>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.label :times, style: "display: block" %>
-    <%= form.text_field :times %>
+    <%= form.label :myscore, style: "display: block" %>
+    <%= form.text_area :myscore, style: "width:100%;height:500px;" %>
   </div>
-
   <div>
-    <%= form.label :keys, style: "display: block" %>
-    <%= form.text_field :keys %>
+    <%= form.label :time_signature, style: "display: block" %>
+    <%= form.text_field :time_signature %>
   </div>
-
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
+    <%= form.label :key_signature, style: "display: block" %>
+    <%= form.text_field :key_signature %>
   </div>
 
   <div>
