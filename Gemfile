@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.4"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
+gem 'seed_dump'
 # Use sqlite3 as the database for Active Record
 gem "countries"
 gem "sqlite3", ">= 2.1"
