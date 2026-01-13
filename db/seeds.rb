@@ -15,6 +15,14 @@ ISO3166::Country.all_translated.each do |country|
     mycountry=Country.find_or_create_by(name: country)
 end
 
+h=Country.find_or_create_by!(name: "Germany")
+k=Composer.find_or_create_by!(country_id: h.id, name: "j.s. bach")
+h=Country.find_or_create_by!(name: "Austria")
+k=Composer.find_or_create_by!(country_id: h.id, name: "mozart")
+h=Country.find_or_create_by!(name: "Russian Federation")
+k=Composer.find_or_create_by!(country_id: h.id, name: "komarowski")
+h=Country.find_or_create_by!(name: "France")
+k=Composer.find_or_create_by!(country_id: h.id, name: "de bériot")
 h=Country.find_or_create_by!(name: "Italy")
 k=Composer.find_or_create_by!(country_id: h.id, name: "viotti")
 k=Composer.find_or_create_by!(country_id: h.id, name: "vivaldi")

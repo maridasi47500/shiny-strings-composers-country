@@ -13,4 +13,6 @@
   <% end %>
 </div>
 
-<%= link_to "New score", new_score_path %>
+<%current_user.composers.each do |h|%>
+<%= link_to "New score by #{h.name}", new_score_path(composer_id: h.id) %>
+<%end%>

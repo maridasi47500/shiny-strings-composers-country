@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_11_022827) do
+ActiveRecord::Schema[8.0].define(version: 2026_01_13_003947) do
   create_table "composers", force: :cascade do |t|
     t.string "country_id"
     t.string "name"
@@ -31,12 +31,20 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_11_022827) do
   end
 
   create_table "scores", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "composer_id"
     t.string "title"
-    t.string "content"
-    t.string "times"
-    t.string "keys"
+    t.string "description"
+    t.string "myscore"
+    t.string "time_signature"
+    t.string "key_signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "userhascomposers", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "composer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,6 +55,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_11_022827) do
     t.string "phone"
     t.integer "musicalinstrument_id"
     t.integer "country_id"
+    t.integer "composercountry_id"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

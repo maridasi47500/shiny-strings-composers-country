@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :composer_id, style: "display: block" %>
-    <%= form.select :composer_id, Composer.all.collect{|h|["#{h.name}", h.id]} %>
+    <%= form.select :composer_id, Composer.all.collect{|h|["#{h.name}", h.id]}, {selected: params[:composer_id]} %>
   </div>
 
     <%= form.hidden_field :user_id %>

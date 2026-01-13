@@ -1,0 +1,2 @@
+class Userhascomposer < ApplicationRecord
+end

@@ -9,6 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[8.0]
       t.string :phone
       t.integer :musicalinstrument_id
       t.integer :country_id
+      t.integer :composercountry_id
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable

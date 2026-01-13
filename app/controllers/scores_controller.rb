@@ -12,7 +12,7 @@ class ScoresController < ApplicationController
 
   # GET /scores/new
   def new
-    @score = Score.new
+    @score = Score.new(user_id: current_user.try(:id))
   end
 
   # GET /scores/1/edit

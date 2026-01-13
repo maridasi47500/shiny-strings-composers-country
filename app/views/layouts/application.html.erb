@@ -29,10 +29,17 @@
 
       </li>
 <%if user_signed_in?%>
+<%Country.all.joins(:composers).group("countries.id").each do |country|%>
+
       <li class="nav-item">
-        <a class="nav-link" href="<%=edit_user_registration_path%>">edit skills</a>
+        <a class="nav-link" href="<%=edit_user_registration_path(country_id: country.id)%>">choose composers from <%=country.name%> and edit my profile </a>
 
       </li>
+
+<%end%>
+</div>
+
+
       <li class="nav-item">
 <%=button_to "Log out", destroy_user_session_path, :method => :delete %>
 
